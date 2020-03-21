@@ -3,17 +3,12 @@ package processor
 fun main() {
     val (nA, mA) = readLine()!!.split(" ")
     val xA = getMatrix(nA, mA)
-    val (nB, mB) = readLine()!!.split(" ")
-    val xB = getMatrix(nB, mB)
-    if (nA.toInt() != nB.toInt() || mA.toInt() != mB.toInt()) {
-        println("ERROR")
-    } else {
-        for (i in 1..nA.toInt()) {
-            for (j in 1..mA.toInt()) {
-                print("${xA[i - 1][j - 1] + xB[i - 1][j - 1]} ")
-            }
-            println()
+    val c = readLine()!!.toInt()
+    for (i in 1..nA.toInt()) {
+        for (j in 1..mA.toInt()) {
+            print("${c * xA[i - 1][j - 1]} ")
         }
+        println()
     }
 }
 
