@@ -1,7 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="78b43134-43cc-4076-8799-3767c79303b3" name="Default Changelist" comment="" />
+    <list default="true" id="78b43134-43cc-4076-8799-3767c79303b3" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gradle/5.3.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.3.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/frameworkLessonHistory/storage.storageData" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/frameworkLessonHistory/storage.storageData" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/frameworkLessonHistory/storage.storageRecordIndex" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/frameworkLessonHistory/storage.storageRecordIndex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Numeric Matrix Processor/Addition/task-info.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/Numeric Matrix Processor/Addition/task-info.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Numeric Matrix Processor/task/src/processor/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/Numeric Matrix Processor/task/src/processor/Main.kt" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -12,7 +21,11 @@
       <ProjectState />
     </projectState>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1ZF2vqCHfUkeRAPmXhOy9bdE8Xy" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -21,6 +34,12 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="show.inlinked.gradle.project.popup" value="false" />
   </component>
   <component name="SvnConfiguration">
@@ -33,17 +52,32 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1584420755558</updated>
-      <workItem from="1584420762768" duration="27000" />
+      <workItem from="1584420762768" duration="301000" />
+      <workItem from="1584811215277" duration="284000" />
+      <workItem from="1584811672504" duration="2380000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="WindowStateProjectService">
-    <state x="421" y="293" key="com.intellij.ide.util.TipDialog" timestamp="1584420790809">
-      <screen x="60" y="23" width="1380" height="877" />
+    <state x="416" y="293" key="com.intellij.ide.util.TipDialog" timestamp="1584811883620">
+      <screen x="54" y="23" width="1386" height="877" />
     </state>
+    <state x="415" y="293" key="com.intellij.ide.util.TipDialog/52.23.1388.877/1440.23.1920.1057@52.23.1388.877" timestamp="1584811214573" />
+    <state x="416" y="293" key="com.intellij.ide.util.TipDialog/54.23.1386.877/1440.23.1920.1057@54.23.1386.877" timestamp="1584811883620" />
     <state x="421" y="293" key="com.intellij.ide.util.TipDialog/60.23.1380.877@60.23.1380.877" timestamp="1584420790809" />
   </component>
 </project>
