@@ -10,9 +10,11 @@
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/frameworkLessonHistory/storage.storageData" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/frameworkLessonHistory/storage.storageData" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/frameworkLessonHistory/storage.storageRecordIndex" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/frameworkLessonHistory/storage.storageRecordIndex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/Numeric Matrix Processor/task/Numeric_Matrix_Processor-task_test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/Numeric Matrix Processor/task/Numeric_Matrix_Processor-task_test.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/util/util_test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/util/util_test.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Numeric Matrix Processor/Matrix by matrix multiplication/task-info.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/Numeric Matrix Processor/Matrix by matrix multiplication/task-info.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Numeric Matrix Processor/Multiplication by number/task-info.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/Numeric Matrix Processor/Multiplication by number/task-info.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Numeric Matrix Processor/task/out/production/classes/processor/MainKt.class" beforeDir="false" afterPath="$PROJECT_DIR$/Numeric Matrix Processor/task/out/production/classes/processor/MainKt.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Numeric Matrix Processor/task/src/processor/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/Numeric Matrix Processor/task/src/processor/Main.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Numeric Matrix Processor/task/test/NumericMatrixProcessorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Numeric Matrix Processor/task/test/NumericMatrixProcessorTest.java" afterDir="false" />
     </list>
@@ -80,7 +82,7 @@
       <workItem from="1584420762768" duration="301000" />
       <workItem from="1584811215277" duration="284000" />
       <workItem from="1584811672504" duration="3002000" />
-      <workItem from="1584951341233" duration="5935000" />
+      <workItem from="1584951341233" duration="10692000" />
     </task>
     <servers />
   </component>
@@ -101,22 +103,26 @@
     </option>
   </component>
   <component name="WindowStateProjectService">
-    <state width="1366" height="224" key="GridCell.Tab.0.bottom" timestamp="1584968695269">
-      <screen x="50" y="23" width="1390" height="877" />
+    <state width="1366" height="224" key="GridCell.Tab.0.bottom" timestamp="1585037063214">
+      <screen x="52" y="23" width="1388" height="877" />
     </state>
     <state width="1366" height="224" key="GridCell.Tab.0.bottom/50.23.1390.877/1440.23.1920.1057@50.23.1390.877" timestamp="1584968695269" />
-    <state width="1366" height="224" key="GridCell.Tab.0.center" timestamp="1584968695269">
-      <screen x="50" y="23" width="1390" height="877" />
+    <state width="1366" height="224" key="GridCell.Tab.0.bottom/52.23.1388.877/1440.23.1920.1057@52.23.1388.877" timestamp="1585037063214" />
+    <state width="1366" height="224" key="GridCell.Tab.0.center" timestamp="1585037063213">
+      <screen x="52" y="23" width="1388" height="877" />
     </state>
     <state width="1366" height="224" key="GridCell.Tab.0.center/50.23.1390.877/1440.23.1920.1057@50.23.1390.877" timestamp="1584968695269" />
-    <state width="1366" height="224" key="GridCell.Tab.0.left" timestamp="1584968695268">
-      <screen x="50" y="23" width="1390" height="877" />
+    <state width="1366" height="224" key="GridCell.Tab.0.center/52.23.1388.877/1440.23.1920.1057@52.23.1388.877" timestamp="1585037063213" />
+    <state width="1366" height="224" key="GridCell.Tab.0.left" timestamp="1585037063213">
+      <screen x="52" y="23" width="1388" height="877" />
     </state>
     <state width="1366" height="224" key="GridCell.Tab.0.left/50.23.1390.877/1440.23.1920.1057@50.23.1390.877" timestamp="1584968695268" />
-    <state width="1366" height="224" key="GridCell.Tab.0.right" timestamp="1584968695269">
-      <screen x="50" y="23" width="1390" height="877" />
+    <state width="1366" height="224" key="GridCell.Tab.0.left/52.23.1388.877/1440.23.1920.1057@52.23.1388.877" timestamp="1585037063213" />
+    <state width="1366" height="224" key="GridCell.Tab.0.right" timestamp="1585037063214">
+      <screen x="52" y="23" width="1388" height="877" />
     </state>
     <state width="1366" height="224" key="GridCell.Tab.0.right/50.23.1390.877/1440.23.1920.1057@50.23.1390.877" timestamp="1584968695269" />
+    <state width="1366" height="224" key="GridCell.Tab.0.right/52.23.1388.877/1440.23.1920.1057@52.23.1388.877" timestamp="1585037063214" />
     <state x="161" y="142" width="1166" height="637" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1584953674400">
       <screen x="50" y="23" width="1390" height="877" />
     </state>

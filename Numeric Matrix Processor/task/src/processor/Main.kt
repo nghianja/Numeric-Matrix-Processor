@@ -6,6 +6,7 @@ fun main() {
         println("1. Add matrices")
         println("2. Multiply matrix to a constant")
         println("3. Multiply matrices")
+        println("4. Transpose matrix")
         println("0. Exit")
         print("Your choice: ")
         choice = readLine()!!.toInt()
@@ -13,7 +14,9 @@ fun main() {
             1 -> addMatrices()
             2 -> multiplyMatrixToConstant()
             3 -> multiplyMatrices()
+            4 -> transposeMatrix()
         }
+        println()
     } while (choice != 0)
 }
 
@@ -86,5 +89,80 @@ private fun multiplyMatrices() {
         for (i in 1..pA.first) {
             println(r[i - 1].joinToString(" "))
         }
+    }
+}
+
+private fun transposeMatrix() {
+    println()
+    println("1. Main diagonal")
+    println("2. Side diagonal")
+    println("3. Vertical line")
+    println("4. Horizontal line")
+    print("Your choice: ")
+    when (readLine()!!.toInt()) {
+        1 -> mainDiagonal()
+        2 -> sideDiagonal()
+        3 -> verticalLine()
+        4 -> horizontalLine()
+    }
+}
+
+private fun mainDiagonal() {
+    val p = getSize("Enter size of matrix: ")
+    val x = getMatrix(p.first, p.second)
+    val t = Array(p.second) { DoubleArray(p.first) { 0.0 } }
+    for (i in 1..p.first) {
+        for (j in 1..p.second) {
+            t[j - 1][i - 1] = x[i - 1][j - 1]
+        }
+    }
+    println("The transpose result is:")
+    for (i in 1..p.second) {
+        println(t[i - 1].joinToString(" "))
+    }
+}
+
+private fun sideDiagonal() {
+    val p = getSize("Enter size of matrix: ")
+    val x = getMatrix(p.first, p.second)
+    val t = Array(p.second) { DoubleArray(p.first) { 0.0 } }
+    for (i in 1..p.first) {
+        for (j in 1..p.second) {
+            t[i - 1][j - 1] = x[p.second - j][p.first - i]
+        }
+    }
+    println("The transpose result is:")
+    for (i in 1..p.second) {
+        println(t[i - 1].joinToString(" "))
+    }
+}
+
+private fun verticalLine() {
+    val p = getSize("Enter size of matrix: ")
+    val x = getMatrix(p.first, p.second)
+    val t = Array(p.first) { DoubleArray(p.second) { 0.0 } }
+    for (i in 1..p.first) {
+        for (j in 1..p.second) {
+            t[i - 1][j - 1] = x[i - 1][p.second - j]
+        }
+    }
+    println("The transpose result is:")
+    for (i in 1..p.second) {
+        println(t[i - 1].joinToString(" "))
+    }
+}
+
+private fun horizontalLine() {
+    val p = getSize("Enter size of matrix: ")
+    val x = getMatrix(p.first, p.second)
+    val t = Array(p.first) { DoubleArray(p.second) { 0.0 } }
+    for (i in 1..p.first) {
+        for (j in 1..p.second) {
+            t[i - 1][j - 1] = x[p.first - i][j - 1]
+        }
+    }
+    println("The transpose result is:")
+    for (i in 1..p.second) {
+        println(t[i - 1].joinToString(" "))
     }
 }
