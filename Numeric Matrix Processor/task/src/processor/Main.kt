@@ -7,6 +7,7 @@ fun main() {
         println("2. Multiply matrix to a constant")
         println("3. Multiply matrices")
         println("4. Transpose matrix")
+        println("5. Calculate a determinant")
         println("0. Exit")
         print("Your choice: ")
         choice = readLine()!!.toInt()
@@ -15,6 +16,7 @@ fun main() {
             2 -> multiplyMatrixToConstant()
             3 -> multiplyMatrices()
             4 -> transposeMatrix()
+            5 -> calculateDeterminant()
         }
         println()
     } while (choice != 0)
@@ -165,4 +167,43 @@ private fun horizontalLine() {
     for (i in 1..p.second) {
         println(t[i - 1].joinToString(" "))
     }
+}
+
+private fun calculateDeterminant() {
+    val p = getSize("Enter matrix size: ")
+    println("Enter matrix: ")
+    val x = getMatrix(p.first, p.second)
+    if (p.second != p.first) {
+        println("ERROR")
+    } else {
+        val determinant = laplaceExpansion(x)
+        println("The result is:")
+        println(determinant)
+    }
+}
+
+private fun laplaceExpansion(matrix: Array<DoubleArray>): Double {
+    var sum = 0.0
+    if (matrix.size == 2) {
+        sum =  matrix[0][0] * matrix[1][1] - matrix[0][1] * matrix[1][0]
+    } else {
+        var c = 1
+        for (j in 1..matrix.size) {
+            val m = Array(matrix.size - 1) { DoubleArray(matrix.size - 1) { 0.0 } }
+            for (i in 1 until matrix.size) {
+                var counter = 0
+                matrix[i].forEachIndexed { index, element ->
+                    run {
+                        if (index != j - 1) {
+                            m[i - 1][counter] = element
+                            counter++
+                        }
+                    }
+                }
+            }
+            sum += c * matrix[0][j - 1] * laplaceExpansion(m)
+            c *= -1
+        }
+    }
+    return sum
 }
