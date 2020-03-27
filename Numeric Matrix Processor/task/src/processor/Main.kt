@@ -1,22 +1,23 @@
 package processor
 
 fun main() {
-    var choice = 0
     do {
         println("1. Add matrices")
         println("2. Multiply matrix to a constant")
         println("3. Multiply matrices")
         println("4. Transpose matrix")
         println("5. Calculate a determinant")
+        println("6. Inverse matrix")
         println("0. Exit")
         print("Your choice: ")
-        choice = readLine()!!.toInt()
+        val choice = readLine()!!.toInt()
         when (choice) {
             1 -> addMatrices()
             2 -> multiplyMatrixToConstant()
             3 -> multiplyMatrices()
             4 -> transposeMatrix()
             5 -> calculateDeterminant()
+            6 -> inverseMatrix()
         }
         println()
     } while (choice != 0)
@@ -48,12 +49,13 @@ private fun addMatrices() {
         println("ERROR")
     } else {
         println("The addition result is:")
+        val r = Array(pA.first) { DoubleArray(pA.second) { 0.0 } }
         for (i in 1..pA.first) {
             for (j in 1..pA.second) {
-                print("${xA[i - 1][j - 1] + xB[i - 1][j - 1]} ")
+                r[i - 1][j - 1] = xA[i - 1][j - 1] + xB[i - 1][j - 1]
             }
-            println()
         }
+        printMatrix(r)
     }
 }
 
@@ -65,10 +67,10 @@ private fun multiplyMatrixToConstant() {
     println("The multiplication to a constant result is:")
     for (i in 1..p.first) {
         for (j in 1..p.second) {
-            print("${c * x[i - 1][j - 1]} ")
+            x[i - 1][j - 1] *= c
         }
-        println()
     }
+    printMatrix(x)
 }
 
 private fun multiplyMatrices() {
@@ -88,9 +90,7 @@ private fun multiplyMatrices() {
             }
         }
         println("The multiplication result is:")
-        for (i in 1..pA.first) {
-            println(r[i - 1].joinToString(" "))
-        }
+        printMatrix(r)
     }
 }
 
@@ -119,9 +119,7 @@ private fun mainDiagonal() {
         }
     }
     println("The transpose result is:")
-    for (i in 1..p.second) {
-        println(t[i - 1].joinToString(" "))
-    }
+    printMatrix(t)
 }
 
 private fun sideDiagonal() {
@@ -134,9 +132,7 @@ private fun sideDiagonal() {
         }
     }
     println("The transpose result is:")
-    for (i in 1..p.second) {
-        println(t[i - 1].joinToString(" "))
-    }
+    printMatrix(t)
 }
 
 private fun verticalLine() {
@@ -149,9 +145,7 @@ private fun verticalLine() {
         }
     }
     println("The transpose result is:")
-    for (i in 1..p.second) {
-        println(t[i - 1].joinToString(" "))
-    }
+    printMatrix(t)
 }
 
 private fun horizontalLine() {
@@ -164,9 +158,7 @@ private fun horizontalLine() {
         }
     }
     println("The transpose result is:")
-    for (i in 1..p.second) {
-        println(t[i - 1].joinToString(" "))
-    }
+    printMatrix(t)
 }
 
 private fun calculateDeterminant() {
@@ -206,4 +198,44 @@ private fun laplaceExpansion(matrix: Array<DoubleArray>): Double {
         }
     }
     return sum
+}
+
+private fun inverseMatrix() {
+    val p = getSize("Enter matrix size: ")
+    println("Enter matrix: ")
+    val x = getMatrix(p.first, p.second)
+    if (p.second != p.first) {
+        println("ERROR")
+    } else {
+        val det = laplaceExpansion(x)
+        if (det == 0.0) {
+            println("Undefined")
+        } else {
+            val cofactors = Array(p.first) { DoubleArray(p.second) { 0.0 } }
+            for (i in 1..p.first) {
+                for (j in 1..p.second) {
+                    val m = Array(x.size - 1) { DoubleArray(x.size - 1) { 0.0 } }
+                    cofactors[i - 1][j - 1] = laplaceExpansion(m)
+                }
+            }
+            printMatrix(cofactors)
+        }
+    }
+}
+
+private fun printMatrix(matrix: Array<DoubleArray>) {
+    val widths = IntArray(matrix[0].size) { 0 }
+    matrix.forEach {
+        it.forEachIndexed { j, e ->
+            run {
+                val len = "%.2f".format(e).length
+                if (len > widths[j])
+                    widths[j] = len
+            }
+        }
+    }
+    matrix.forEach {
+        it.forEachIndexed { j, e -> print("${"%.2f".format(e).padStart(widths[j])} ") }
+        println()
+    }
 }
