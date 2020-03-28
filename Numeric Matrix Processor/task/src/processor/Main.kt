@@ -1,5 +1,7 @@
 package processor
 
+import kotlin.math.pow
+
 fun main() {
     do {
         println("1. Add matrices")
@@ -101,64 +103,59 @@ private fun transposeMatrix() {
     println("3. Vertical line")
     println("4. Horizontal line")
     print("Your choice: ")
-    when (readLine()!!.toInt()) {
-        1 -> mainDiagonal()
-        2 -> sideDiagonal()
-        3 -> verticalLine()
-        4 -> horizontalLine()
+    val choice = readLine()!!.toInt()
+    val p = getSize("Enter matrix size: ")
+    println("Enter matrix: ")
+    val x = getMatrix(p.first, p.second)
+    val t = when (choice) {
+        1 -> mainDiagonal(x)
+        2 -> sideDiagonal(x)
+        3 -> verticalLine(x)
+        4 -> horizontalLine(x)
+        else -> Array(1) { DoubleArray(1) { 0.0 } }
     }
+    println("The transpose result is:")
+    printMatrix(t)
 }
 
-private fun mainDiagonal() {
-    val p = getSize("Enter size of matrix: ")
-    val x = getMatrix(p.first, p.second)
-    val t = Array(p.second) { DoubleArray(p.first) { 0.0 } }
-    for (i in 1..p.first) {
-        for (j in 1..p.second) {
+private fun mainDiagonal(x: Array<DoubleArray>): Array<DoubleArray> {
+    val t = Array(x[0].size) { DoubleArray(x.size) { 0.0 } }
+    for (i in 1..x.size) {
+        for (j in 1..x[0].size) {
             t[j - 1][i - 1] = x[i - 1][j - 1]
         }
     }
-    println("The transpose result is:")
-    printMatrix(t)
+    return t
 }
 
-private fun sideDiagonal() {
-    val p = getSize("Enter size of matrix: ")
-    val x = getMatrix(p.first, p.second)
-    val t = Array(p.second) { DoubleArray(p.first) { 0.0 } }
-    for (i in 1..p.first) {
-        for (j in 1..p.second) {
-            t[i - 1][j - 1] = x[p.second - j][p.first - i]
+private fun sideDiagonal(x: Array<DoubleArray>): Array<DoubleArray> {
+    val t = Array(x[0].size) { DoubleArray(x.size) { 0.0 } }
+    for (i in 1..x.size) {
+        for (j in 1..x[0].size) {
+            t[i - 1][j - 1] = x[x[0].size - j][x.size - i]
         }
     }
-    println("The transpose result is:")
-    printMatrix(t)
+    return t
 }
 
-private fun verticalLine() {
-    val p = getSize("Enter size of matrix: ")
-    val x = getMatrix(p.first, p.second)
-    val t = Array(p.first) { DoubleArray(p.second) { 0.0 } }
-    for (i in 1..p.first) {
-        for (j in 1..p.second) {
-            t[i - 1][j - 1] = x[i - 1][p.second - j]
+private fun verticalLine(x: Array<DoubleArray>): Array<DoubleArray> {
+    val t = Array(x[0].size) { DoubleArray(x.size) { 0.0 } }
+    for (i in 1..x.size) {
+        for (j in 1..x[0].size) {
+            t[i - 1][j - 1] = x[i - 1][x[0].size - j]
         }
     }
-    println("The transpose result is:")
-    printMatrix(t)
+    return t
 }
 
-private fun horizontalLine() {
-    val p = getSize("Enter size of matrix: ")
-    val x = getMatrix(p.first, p.second)
-    val t = Array(p.first) { DoubleArray(p.second) { 0.0 } }
-    for (i in 1..p.first) {
-        for (j in 1..p.second) {
-            t[i - 1][j - 1] = x[p.first - i][j - 1]
+private fun horizontalLine(x: Array<DoubleArray>): Array<DoubleArray> {
+    val t = Array(x[0].size) { DoubleArray(x.size) { 0.0 } }
+    for (i in 1..x.size) {
+        for (j in 1..x[0].size) {
+            t[i - 1][j - 1] = x[x.size - i][j - 1]
         }
     }
-    println("The transpose result is:")
-    printMatrix(t)
+    return t
 }
 
 private fun calculateDeterminant() {
@@ -212,13 +209,26 @@ private fun inverseMatrix() {
             println("Undefined")
         } else {
             val cofactors = Array(p.first) { DoubleArray(p.second) { 0.0 } }
-            for (i in 1..p.first) {
-                for (j in 1..p.second) {
-                    val m = Array(x.size - 1) { DoubleArray(x.size - 1) { 0.0 } }
-                    cofactors[i - 1][j - 1] = laplaceExpansion(m)
+            for (i in x.indices) {
+                for (j in x[0].indices) {
+                    val m = Array(p.first - 1) { DoubleArray(p.second -1) { 0.0 } }
+                    var counter = 0
+                    for (k in x.indices) {
+                        if (i != k) {
+                            m[counter] = x[k].filterIndexed { index, _ -> index != j }.toDoubleArray()
+                            counter++
+                        }
+                    }
+                    cofactors[i][j] = laplaceExpansion(m) * (-1.0).pow(i + j)
                 }
             }
-            printMatrix(cofactors)
+            val transpose = mainDiagonal(cofactors)
+            for (i in 1..transpose.size) {
+                for (j in 1..transpose[0].size) {
+                    transpose[i - 1][j - 1] *= 1.0 / det
+                }
+            }
+            printMatrix(transpose)
         }
     }
 }

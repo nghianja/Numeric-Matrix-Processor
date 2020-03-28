@@ -7,13 +7,12 @@
       <change beforePath="$PROJECT_DIR$/.gradle/5.3.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.3.1/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.3.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.3.1/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/frameworkLessonHistory/storage.storageData" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/frameworkLessonHistory/storage.storageData" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/frameworkLessonHistory/storage.storageRecordIndex" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/frameworkLessonHistory/storage.storageRecordIndex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/Numeric Matrix Processor/task/Numeric_Matrix_Processor-task_test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/Numeric Matrix Processor/task/Numeric_Matrix_Processor-task_test.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/util/util_test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/util/util_test.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Numeric Matrix Processor/Determined!/task-info.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/Numeric Matrix Processor/Determined!/task-info.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Numeric Matrix Processor/Inverse matrix/task-info.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/Numeric Matrix Processor/Inverse matrix/task-info.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Numeric Matrix Processor/task/out/production/classes/processor/MainKt.class" beforeDir="false" afterPath="$PROJECT_DIR$/Numeric Matrix Processor/task/out/production/classes/processor/MainKt.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Numeric Matrix Processor/task/src/processor/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/Numeric Matrix Processor/task/src/processor/Main.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Numeric Matrix Processor/task/test/NumericMatrixProcessorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Numeric Matrix Processor/task/test/NumericMatrixProcessorTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,6 +82,7 @@
       <workItem from="1585149970374" duration="54000" />
       <workItem from="1585150067130" duration="8165000" />
       <workItem from="1585248210818" duration="7984000" />
+      <workItem from="1585324926134" duration="9956000" />
     </task>
     <servers />
   </component>
@@ -107,50 +107,58 @@
       <screen x="52" y="23" width="1388" height="877" />
     </state>
     <state x="432" y="195" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/52.23.1388.877/1440.23.1920.1057@52.23.1388.877" timestamp="1585150032776" />
-    <state width="1366" height="224" key="GridCell.Tab.0.bottom" timestamp="1585322728738">
-      <screen x="54" y="23" width="1386" height="877" />
+    <state width="1366" height="224" key="GridCell.Tab.0.bottom" timestamp="1585338262879">
+      <screen x="60" y="23" width="1380" height="877" />
     </state>
     <state width="1366" height="224" key="GridCell.Tab.0.bottom/50.23.1390.877/1440.23.1920.1057@50.23.1390.877" timestamp="1584968695269" />
     <state width="1366" height="224" key="GridCell.Tab.0.bottom/52.23.1388.877/1440.23.1920.1057@52.23.1388.877" timestamp="1585289621456" />
     <state width="1366" height="224" key="GridCell.Tab.0.bottom/54.23.1386.877/1440.23.1920.1057@54.23.1386.877" timestamp="1585167655536" />
     <state width="1366" height="224" key="GridCell.Tab.0.bottom/54.23.1386.877@54.23.1386.877" timestamp="1585322728738" />
     <state width="1366" height="224" key="GridCell.Tab.0.bottom/60.23.1380.877/1440.23.1920.1057@60.23.1380.877" timestamp="1585293220249" />
-    <state width="1366" height="224" key="GridCell.Tab.0.center" timestamp="1585322728738">
-      <screen x="54" y="23" width="1386" height="877" />
+    <state width="1366" height="224" key="GridCell.Tab.0.bottom/60.23.1380.877@60.23.1380.877" timestamp="1585338262879" />
+    <state width="1366" height="224" key="GridCell.Tab.0.center" timestamp="1585338262878">
+      <screen x="60" y="23" width="1380" height="877" />
     </state>
     <state width="1366" height="224" key="GridCell.Tab.0.center/50.23.1390.877/1440.23.1920.1057@50.23.1390.877" timestamp="1584968695269" />
     <state width="1366" height="224" key="GridCell.Tab.0.center/52.23.1388.877/1440.23.1920.1057@52.23.1388.877" timestamp="1585289621455" />
     <state width="1366" height="224" key="GridCell.Tab.0.center/54.23.1386.877/1440.23.1920.1057@54.23.1386.877" timestamp="1585167655536" />
     <state width="1366" height="224" key="GridCell.Tab.0.center/54.23.1386.877@54.23.1386.877" timestamp="1585322728738" />
     <state width="1366" height="224" key="GridCell.Tab.0.center/60.23.1380.877/1440.23.1920.1057@60.23.1380.877" timestamp="1585293220248" />
-    <state width="1366" height="224" key="GridCell.Tab.0.left" timestamp="1585322728737">
-      <screen x="54" y="23" width="1386" height="877" />
+    <state width="1366" height="224" key="GridCell.Tab.0.center/60.23.1380.877@60.23.1380.877" timestamp="1585338262878" />
+    <state width="1366" height="224" key="GridCell.Tab.0.left" timestamp="1585338262877">
+      <screen x="60" y="23" width="1380" height="877" />
     </state>
     <state width="1366" height="224" key="GridCell.Tab.0.left/50.23.1390.877/1440.23.1920.1057@50.23.1390.877" timestamp="1584968695268" />
     <state width="1366" height="224" key="GridCell.Tab.0.left/52.23.1388.877/1440.23.1920.1057@52.23.1388.877" timestamp="1585289621454" />
     <state width="1366" height="224" key="GridCell.Tab.0.left/54.23.1386.877/1440.23.1920.1057@54.23.1386.877" timestamp="1585167655535" />
     <state width="1366" height="224" key="GridCell.Tab.0.left/54.23.1386.877@54.23.1386.877" timestamp="1585322728737" />
     <state width="1366" height="224" key="GridCell.Tab.0.left/60.23.1380.877/1440.23.1920.1057@60.23.1380.877" timestamp="1585293220247" />
-    <state width="1366" height="224" key="GridCell.Tab.0.right" timestamp="1585322728738">
-      <screen x="54" y="23" width="1386" height="877" />
+    <state width="1366" height="224" key="GridCell.Tab.0.left/60.23.1380.877@60.23.1380.877" timestamp="1585338262877" />
+    <state width="1366" height="224" key="GridCell.Tab.0.right" timestamp="1585338262878">
+      <screen x="60" y="23" width="1380" height="877" />
     </state>
     <state width="1366" height="224" key="GridCell.Tab.0.right/50.23.1390.877/1440.23.1920.1057@50.23.1390.877" timestamp="1584968695269" />
     <state width="1366" height="224" key="GridCell.Tab.0.right/52.23.1388.877/1440.23.1920.1057@52.23.1388.877" timestamp="1585289621456" />
     <state width="1366" height="224" key="GridCell.Tab.0.right/54.23.1386.877/1440.23.1920.1057@54.23.1386.877" timestamp="1585167655536" />
     <state width="1366" height="224" key="GridCell.Tab.0.right/54.23.1386.877@54.23.1386.877" timestamp="1585322728738" />
     <state width="1366" height="224" key="GridCell.Tab.0.right/60.23.1380.877/1440.23.1920.1057@60.23.1380.877" timestamp="1585293220248" />
+    <state width="1366" height="224" key="GridCell.Tab.0.right/60.23.1380.877@60.23.1380.877" timestamp="1585338262878" />
+    <state x="281" y="178" key="RollbackChangesDialog" timestamp="1585325036599">
+      <screen x="60" y="23" width="1380" height="877" />
+    </state>
+    <state x="281" y="178" key="RollbackChangesDialog/60.23.1380.877@60.23.1380.877" timestamp="1585325036599" />
     <state x="165" y="142" width="1163" height="637" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1585248429942">
       <screen x="54" y="23" width="1386" height="877" />
     </state>
     <state x="161" y="142" width="1166" height="637" key="com.intellij.history.integration.ui.views.FileHistoryDialog/50.23.1390.877/1440.23.1920.1057@50.23.1390.877" timestamp="1584953674400" />
     <state x="165" y="142" width="1163" height="637" key="com.intellij.history.integration.ui.views.FileHistoryDialog/54.23.1386.877@54.23.1386.877" timestamp="1585248429942" />
-    <state x="416" y="293" key="com.intellij.ide.util.TipDialog" timestamp="1585248211599">
-      <screen x="54" y="23" width="1386" height="877" />
+    <state x="421" y="293" key="com.intellij.ide.util.TipDialog" timestamp="1585324998484">
+      <screen x="60" y="23" width="1380" height="877" />
     </state>
     <state x="413" y="293" key="com.intellij.ide.util.TipDialog/50.23.1390.877/1440.23.1920.1057@50.23.1390.877" timestamp="1584951341799" />
     <state x="415" y="293" key="com.intellij.ide.util.TipDialog/52.23.1388.877/1440.23.1920.1057@52.23.1388.877" timestamp="1585150067842" />
     <state x="416" y="293" key="com.intellij.ide.util.TipDialog/54.23.1386.877/1440.23.1920.1057@54.23.1386.877" timestamp="1584811883620" />
     <state x="416" y="293" key="com.intellij.ide.util.TipDialog/54.23.1386.877@54.23.1386.877" timestamp="1585248211599" />
-    <state x="421" y="293" key="com.intellij.ide.util.TipDialog/60.23.1380.877@60.23.1380.877" timestamp="1584420790809" />
+    <state x="421" y="293" key="com.intellij.ide.util.TipDialog/60.23.1380.877@60.23.1380.877" timestamp="1585324998484" />
   </component>
 </project>
