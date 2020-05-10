@@ -107,12 +107,46 @@ def horizontal_line():
         print(*r)
 
 
+def calculate_determinant():
+    s = get_size("Enter matrix size: ")
+    print("Enter matrix: ")
+    x = get_matrix(s)
+    if s[1] != s[0]:
+        print("ERROR")
+    else:
+        determinant = laplace_expansion(x)
+        print("The result is:")
+        print(determinant)
+
+
+def laplace_expansion(matrix):
+    total = 0.0
+    if len(matrix) == 1:
+        total = matrix[0][0]
+    elif len(matrix) == 2:
+        total = matrix[0][0] * matrix[1][1] - matrix[0][1] * matrix[1][0]
+    else:
+        c = 1
+        for j in range(1, len(matrix) + 1):
+            m = [[0.0] * (len(matrix) - 1) for _n in range(len(matrix) - 1)]
+            for i in range(1, len(matrix)):
+                counter = 0
+                for index, element in enumerate(matrix[i]):
+                    if index != j - 1:
+                        m[i - 1][counter] = element
+                        counter += 1
+            total += c * matrix[0][j - 1] * laplace_expansion(m)
+            c *= -1
+    return total
+
+
 if __name__ == '__main__':
     while True:
         print("1. Add matrices")
         print("2. Multiply matrix to a constant")
         print("3. Multiply matrices")
         print("4. Transpose matrix")
+        print("5. Calculate a determinant")
         print("0. Exit")
         choice = int(input("Your choice: "))
         if choice == 1:
@@ -123,5 +157,7 @@ if __name__ == '__main__':
             multiply_matrices()
         elif choice == 4:
             transpose_matrix()
+        elif choice == 5:
+            calculate_determinant()
         elif choice == 0:
             break
