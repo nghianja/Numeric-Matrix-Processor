@@ -1,3 +1,6 @@
+import math
+
+
 def get_size(message):
     return tuple([int(i) for i in input(message).split()])
 
@@ -53,58 +56,54 @@ def transpose_matrix():
     print("3. Vertical line")
     print("4. Horizontal line")
     choice = int(input("Your choice: "))
+    s = get_size("Enter matrix size: ")
+    print("Enter matrix: ")
+    x = get_matrix(s)
     if choice == 1:
-        main_diagonal()
+        t = main_diagonal(x)
     elif choice == 2:
-        side_diagonal()
+        t = side_diagonal(x)
     elif choice == 3:
-        vertical_line()
+        t = vertical_line(x)
     elif choice == 4:
-        horizontal_line()
-
-
-def main_diagonal():
-    x = get_matrix(get_size("Enter size of matrix: "))
+        t = horizontal_line(x)
+    else:
+        t = [[0.0]]
     print("The transpose result is:")
+    for r in t:
+        print(*r)
+
+
+def main_diagonal(x):
     t = [[0.0] * len(x[0]) for _n in range(len(x))]
     for i in range(len(x)):
         for j in range(len(x[0])):
             t[j][i] = x[i][j]
-    for r in t:
-        print(*r)
+    return t
 
 
-def side_diagonal():
-    x = get_matrix(get_size("Enter size of matrix: "))
-    print("The transpose result is:")
+def side_diagonal(x):
     t = [[0.0] * len(x[0]) for _n in range(len(x))]
     for i in range(len(x)):
         for j in range(len(x[0])):
             t[i][j] = x[len(x[0]) - 1 - j][len(x) - 1 - i]
-    for r in t:
-        print(*r)
+    return t
 
 
-def vertical_line():
-    x = get_matrix(get_size("Enter size of matrix: "))
-    print("The transpose result is:")
+def vertical_line(x):
     t = [[0.0] * len(x[0]) for _n in range(len(x))]
     for i in range(len(x)):
         for j in range(len(x[0])):
             t[i][j] = x[i][len(x[0]) - 1 - j]
-    for r in t:
-        print(*r)
+    return t
 
 
-def horizontal_line():
-    x = get_matrix(get_size("Enter size of matrix: "))
-    print("The transpose result is:")
+def horizontal_line(x):
     t = [[0.0] * len(x[0]) for _n in range(len(x))]
     for i in range(len(x)):
         for j in range(len(x[0])):
             t[i][j] = x[len(x) - 1 - i][j]
-    for r in t:
-        print(*r)
+    return t
 
 
 def calculate_determinant():
@@ -140,6 +139,33 @@ def laplace_expansion(matrix):
     return total
 
 
+def inverse_matrix():
+    s = get_size("Enter matrix size: ")
+    print("Enter matrix: ")
+    x = get_matrix(s)
+    if s[1] != s[0]:
+        print("ERROR")
+    else:
+        det = laplace_expansion(x)
+        if det == 0.0:
+            print("Undefined")
+        else:
+            cofactors = [[0.0] * s[1] for _n in range(s[0])]
+            for i in range(len(x)):
+                for j in range(len(x[0])):
+                    m = [[0.0] * (s[1] - 1) for _n in range(s[0] - 1)]
+                    counter = 0
+                    for k in range(len(x)):
+                        if i != k:
+                            m[counter] = [x[k][n] for n in range(len(x[k])) if n != j]
+                            counter += 1
+                    cofactors[i][j] = laplace_expansion(m) * math.pow(-1.0, i + j)
+            transpose = main_diagonal(cofactors)
+            for i in range(len(transpose)):
+                transpose[i] = [ele * 1.0 / det for ele in transpose[i]]
+                print(*transpose[i])
+
+
 if __name__ == '__main__':
     while True:
         print("1. Add matrices")
@@ -147,6 +173,7 @@ if __name__ == '__main__':
         print("3. Multiply matrices")
         print("4. Transpose matrix")
         print("5. Calculate a determinant")
+        print("6. Inverse matrix")
         print("0. Exit")
         choice = int(input("Your choice: "))
         if choice == 1:
@@ -159,5 +186,7 @@ if __name__ == '__main__':
             transpose_matrix()
         elif choice == 5:
             calculate_determinant()
+        elif choice == 6:
+            inverse_matrix()
         elif choice == 0:
             break
